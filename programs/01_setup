@@ -20,9 +20,10 @@ rm Data/MPVDatasetDownload.xlsx
 wget -O 'Data/PostKillingsData.csv' https://raw.githubusercontent.com/washingtonpost/data-police-shootings/master/fatal-police-shootings-data.csv
 
 # police data initiative
-cp PoliceDataInitiative.csv ./Data/PoliceDataInitiative.csv
+cp PoliceDataInitiativeParticipants.csv ./Data/PoliceDataInitiativeParticipants.csv
 
 # metro population
 cp MetroPopulation.csv ./Data/MetroPopulation.csv
 
-
+# gun crime
+ wget -O Data/USguncrime.csv https://docs.google.com/spreadsheets/d/1GZP1oymvWHEoRnJjP-XdKfmVIqQX2JXy2DgWuVQ3faw/export?format=csv
