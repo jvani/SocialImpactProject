@@ -1,0 +1,29 @@
+#!/bin/bash
+## setup_01
+
+## this script prepares the working directory and downloads the raw data we will use in this project
+
+# make sure we are at the top of the git directory
+REPOLOC="$(git rev-parse --show-toplevel)"
+cd $REPOLOC
+
+# if it doesn't exist, create the data director
+mkdir -p Data
+
+# download and prepare the data
+# mapping police violence
+wget -O 'Data/MPVDatasetDownload.xlsx' https://mappingpoliceviolence.org/s/MPVDatasetDownload-d4a6.xlsx
+./programs/xlsx2csv.py Data/MPVDatasetDownload.xlsx Data/MPVDatasetDownload.csv
+rm Data/MPVDatasetDownload.xlsx
+
+# washington post dataset
+wget -O 'Data/PostKillingsData.csv' https://raw.githubusercontent.com/washingtonpost/data-police-shootings/master/fatal-police-shootings-data.csv
+
+# police data initiative
+cp PoliceDataInitiativeParticipants.csv ./Data/PoliceDataInitiativeParticipants.csv
+
+# metro population
+cp MetroPopulation.csv ./Data/MetroPopulation.csv
+
+# gun crime
+ wget -O Data/USguncrime.csv https://docs.google.com/spreadsheets/d/1GZP1oymvWHEoRnJjP-XdKfmVIqQX2JXy2DgWuVQ3faw/export?format=csv

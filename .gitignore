@@ -1,7 +1,15 @@
 
-/Data/
-*.csv
 VISA Exploration-checkpoint.ipynb
 Untitled1-checkpoint.ipynb
 PoliceDataInitiative-checkpoint.ipynb
 FindColNames-checkpoint.ipynb
+
+Data/USguncrime.csv
+
+Data/MetroPopulation.csv
+
+Data/MPVDatasetDownload.csv
+
+Data/PoliceDataInitiativeParticipants.csv
+
+Data/PostKillingsData.csv
